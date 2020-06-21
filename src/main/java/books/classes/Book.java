@@ -1,13 +1,18 @@
 package books.classes;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+
+
 public class Book {
+    private long id;
     private String title;
     private String author;
 
     public Book(){
 
     }
-    public Book(String title,String author){
+    public Book(long id,String title,String author){
+        this.id=id;
         this.title=title;
         this.author=author;
     }
@@ -26,5 +31,13 @@ public class Book {
 
     public void setAuthor(String author) {
         this.author = author;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 }
